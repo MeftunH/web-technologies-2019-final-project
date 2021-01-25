@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sehrim</title>
+      <link rel="stylesheet" type="text/css" href="sehrimcss.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+         <section id="nav-bar">  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml auto">
+         <li class="nav-item">
+        <a class="nav-link" href="hakkinda.html" target="_blank">HAKKINDA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sehrim.html" target="_blank">SEHRIM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ozgecmis.html" target="_blank">OZGECMIS</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="mirasimiz.html" target="_blank">MIRASIMIZ</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="iletisim.html">ILETISIM</a>
+      </li> 
+    </ul>
+  </div>
+</nav>   
+        </section>       
+    </body>
+</html>
+<?php
+if($_GET)
+{
+   $ad = $_GET["ad"];
+   $soyad = $_GET["soyad"];
+   $dt = $_GET["dt"];
+   $numara = $_GET["numara"];
+  $mailadres=$_GET["mailadres"];
+$cinsiyet = $_GET["cinsiyet"];
+$asker = $_GET["asker"];
+$ilkokul = $_GET["ilkokul"];
+$ortaokul = $_GET["ortaokul"];
+$digerdil = $_GET["digerdil"];
+$digerilgi = $_GET["digerilgi"];
+$digerbeceri = $_GET["digerbeceri"];
+echo  "Merhaba".$ad."<br />";
+   echo  "Merhaba".$soyad."<br />"; 
+echo  "Merhaba".$numara."<br />";
+}
+?>

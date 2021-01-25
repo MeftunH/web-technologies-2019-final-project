@@ -1,0 +1,78 @@
+ body
+{
+         background-image: url('bck.png');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: right top;
+      opacity:0.99   
+}
+*
+#baslik
+{
+    color: red;
+}
+{
+    margin:0;
+    padding:0; 
+}
+#nav-bar
+{
+    color: darkblue;
+    position:sticky
+    top:0;
+    z-index: 10;
+    height: auto;
+}
+.nav-bar img
+{
+    height: 60px;
+    padding-left: 40px;
+}
+.nav-item
+{
+    font-size: 30px;
+}
+.navbar-nav li
+{
+    padding: :0 20px;    
+}
+.nav-bar li a
+{
+    float: right;
+    text-align: left;
+}
+#nav-bar ul li a:hover
+{
+    color:#007bff!important;
+}
+.navbar
+{
+    background:red;
+}
+.navbar-toggler
+{
+    border:none!important;    
+}
+.nav-link
+{
+    color: darkgreen;
+    font-weight: 1400;
+    font-size: 30px;   
+}
+.carousel-caption
+{
+position: fixed
+      top: 30px;
+      right: 5px;
+}
+.carousel-caption h5
+{
+   color: brown;
+    font-size: 42px;
+}
+
+#text{
+    color: forestgreen
+}
+
+

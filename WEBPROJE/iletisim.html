@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iletisim</title>
+      <link rel="stylesheet" type="text/css" href="iletisim.css">    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    </head>
+    <body>
+         <section id="nav-bar">  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml auto">
+         <li class="nav-item">
+        <a class="nav-link" href="hakkinda.html" target="_blank">HAKKINDA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sehrim.html" target="_blank">SEHRIM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ozgecmis.html" target="_blank">OZGECMIS</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="mirasimiz.html" target="_blank">MIRASIMIZ</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="iletisim.html" target="_blank">ILETISIM</a>
+      </li> 
+    </ul>
+</div>
+</nav>   
+  </section>
+<style type="text/css">
+body{ background:#f6f6f6; font-family:tahoma}
+.container{ width:900px; height:570px; margin:10px auto; padding:90px 0 20px 40px}
+section{ width:450px; height:220px; float:left; margin:0 40px 60px 0}
+aside{ width:450px; height:120px; float:left; margin:0 40px 60px 0}
+footer{ width:980px; height:100px; float:left}
+.baslikkutu{ width:450px; padding:0 0 10px 0; margin:0 0 15px 0; border-bottom:2px solid #dd9d42; color:#104579; font:bold 19px tahoma}
+section input, aside input{ width:300px; padding:5px; border:1px dashed #a0a0a0; color:#104579; font-size:14px}
+section input:hover{border:1px dashed #bd652b; background:#f0ddbc}
+input.radyo, input.onay{ width:15px}
+textarea{ width:930px; height:65px;padding:5px; border:1px solid #ddd; color:#4b4b4b; font-size:14px }
+button, input.gonder{ width:100px; padding:10px 25px; margin:0 30px 20px 0;color:#fff; font-size:14px; background:#24588f; cursor:pointer; border:none  }
+tr:hover{ color:#bd652b}
+tr:hover .siyah{ color:#000}
+input:focus, textarea:focus{ outline:none}
+#askerlik,#digerdil,#digerbeceri{ width:300px;padding:5px; border:1px dashed #a0a0a0; color:#104579; font-size:14px}
+</style>
+
+<script type="text/javascript">
+function askerlikdurumu(deger)
+{
+	if(document.getElementById(deger).value=="Erkek")
+	{ document.getElementById("askerlik").type="text";}
+	else
+	{document.getElementById("askerlik").type="hidden";}
+	
+	
+}
+
+function ackapat(deger)
+{
+	if(document.getElementById(deger).type=="text")
+	{ document.getElementById(deger).type="hidden";}
+	else
+	{document.getElementById(deger).type="text";}
+	
+	
+}
+
+function kapat()
+{
+	document.getElementById("askerlik").value="";
+	document.getElementById("digerdil").value="";
+	document.getElementById("digerilgi").value="";
+	document.getElementById("digerbeceri").value="";
+	document.getElementById("askerlik").type="hidden";
+	document.getElementById("digerdil").type="hidden";
+	document.getElementById("digerilgi").type="hidden";
+	document.getElementById("digerbeceri").type="hidden";
+}
+</script>
+       
+  
+<form method="GET" action="goster.php">
+<div class="container">
+<section>
+<div class="baslikkutu">Kişisel Bilgiler</div>
+<table width="450" height="220">
+  <tr>
+    <td width="145">Ad</td>
+    <td width="5">:</td>
+    <td width="300"><input name="ad" type="text" maxlength="20" placeholder="Adınızı giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Soyad</td>
+    <td>:</td>
+    <td><input name="soyad" type="text" placeholder="Soyadınızı giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Doğum Tarihi</td>
+    <td>:</td>
+    <td><input name="dt" type="date" required="required" /></td>
+  </tr>
+  <tr>
+    <td>Telefon</td>
+    <td>:</td>
+    <td><input name="numara" type="text" pattern="[\(]\d{3}[\)][\s]\d{3}[\s]\d{2}[\s]\d{2}" placeholder="(xxx) xxx xx xx" required="required" /></td>
+  </tr>
+  <tr>
+    <td>Mail Adresi</td>
+    <td>:</td>
+    <td><input name="mailadres" type="email" placeholder="Mail adresinizi giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Cinsiyet</td>
+    <td>:</td>
+    <td class="siyah">
+        <input id="erkek" name="cinsiyet" type="radio" value="Erkek" class="radyo" required="required" onclick="askerlikdurumu(this.id)" />Erkek
+        <input id="kadin" name="cinsiyet" type="radio" value="Kadın" class="radyo" required="required" onclick="askerlikdurumu(this.id)" />Kadın
+        <input id="askerlik" name="asker" type="hidden" placeholder="Askerlik durumunu giriniz." value="" />
+    </td>
+  </tr>
+</table>
+
+</section>
+<section>
+<div class="baslikkutu">Eğitim Durumu</div>
+<table width="450" height="220">
+  <tr>
+    <td width="145">İlkokul</td>
+    <td width="5">:</td>
+    <td width="300"><input name="ilkokul" type="text" placeholder="Okuduğunuz ilkokulu giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Ortaokul</td>
+    <td>:</td>
+    <td><input name="ortaokul" type="text" placeholder="Okuduğunuz ortaokulu giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Lise</td>
+    <td>:</td>
+    <td><input name="lise" type="text" placeholder="Okuduğunuz liseyi giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Üniversite</td>
+    <td>:</td>
+    <td><input name="universite" type="text" placeholder="Okuduğunuz üniversiteyi giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Yüksek Lisans</td>
+    <td>:</td>
+    <td><input name="yukseklisans" type="text" placeholder="Yüksek Lisans yaptığınız üniversiteyi giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Yabancı Dil</td>
+    <td>:</td>
+    <td class="siyah"><input class="onay" name="" type="checkbox" value="" />İngilizce
+    	<input class="onay" name="" type="checkbox" value="" />Almanca
+        <input class="onay" name="" type="checkbox" value="" />Arapça
+        <input class="onay" name="" type="checkbox" value="" onclick="ackapat('digerdil')" />Diğer
+        <input id="digerdil" name="digerdil" type="hidden" placeholder="Diğer bildiğiniz dili giriniz." value="" />
+    </td>
+  </tr>
+</table>
+</section>
+<aside>
+<div class="baslikkutu">İlgi Alanları</div>
+<input class="onay" name="" type="checkbox" value="" />Sinema<br />
+<input class="onay" name="" type="checkbox" value="" />Tiyatro<br />
+<input class="onay" name="" type="checkbox" value="" />Spor<br />
+<input class="onay" name="" type="checkbox" value="" />Kitap<br />
+<input class="onay" name="" type="checkbox" onclick="ackapat('digerilgi')" value="" />Diğer
+<input id="digerilgi" name="digerilgi" type="hidden" placeholder="Diğer ilgi alanınızı giriniz." value="" />
+</aside>
+<aside>
+<div class="baslikkutu">Beceriler</div>
+<input class="onay" name="" type="checkbox" value="" />Html<br />
+<input class="onay" name="" type="checkbox" value="" />Css<br />
+<input class="onay" name="" type="checkbox" value="" />Php<br />
+<input class="onay" name="" type="checkbox" value="" />Asp.Net<br />
+<input class="onay" name="" type="checkbox" onclick="ackapat('digerbeceri')" value="" />Diğer
+<input id="digerbeceri" name="digerbeceri" type="hidden" placeholder="Diğer becerinizi giriniz." value="" />
+</aside>
+<footer>
+<div class="baslikkutu">Düşünceleriniz</div>
+<textarea required="required"></textarea><br /><br />
+<button>Gönder</button>
+<input class="gonder" name="" type="reset" onclick="kapat()" />
+</footer>
+</div>   
+</form>
+</body>
+</html>
